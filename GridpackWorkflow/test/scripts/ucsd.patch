@@ -1,7 +1,7 @@
-diff -ur -x '.*/models/.*' ../old/MG5_aMC_v2_3_3/madgraph/various/cluster.py MG5_aMC_v2_3_3/madgraph/various/cluster.py
---- ../old/MG5_aMC_v2_3_3/madgraph/various/cluster.py   2015-10-26 02:18:52.000000001 +0100
-+++ MG5_aMC_v2_3_3/madgraph/various/cluster.py  2015-12-11 15:13:21.000000001 +0100
-@@ -835,26 +835,35 @@
+diff -ur -x '.*/models/.*' ../old/MG5_aMC_v2_4_2/madgraph/various/cluster.py MG5_aMC_v2_4_2/madgraph/various/cluster.py
+--- ../old/MG5_aMC_v2_4_2/madgraph/various/cluster.py   2015-10-26 02:18:52.000000001 +0100
++++ MG5_aMC_v2_4_2/madgraph/various/cluster.py  2015-12-11 15:13:21.000000001 +0100
+@@ -836,25 +836,35 @@
      name = 'condor'
      job_id = 'CONDOR_ID'
  
@@ -31,7 +31,6 @@ diff -ur -x '.*/models/.*' ../old/MG5_aMC_v2_3_3/madgraph/various/cluster.py MG5
 -                  Universe = vanilla
 -                  notification = Error
                    Initialdir = %(cwd)s
--                  Request_memory = 528
 -                  %(requirement)s
 -                  getenv=True
 -                  queue 1
@@ -59,7 +58,7 @@ diff -ur -x '.*/models/.*' ../old/MG5_aMC_v2_3_3/madgraph/various/cluster.py MG5
          
          if not required_output and output_files:
              required_output = output_files
-@@ -916,22 +930,27 @@
+@@ -916,21 +930,27 @@
              return self.submit(prog, argument, cwd, stdout, stderr, log, 
                                 required_output=required_output, nb_submit=nb_submit)
          
@@ -82,7 +81,6 @@ diff -ur -x '.*/models/.*' ../old/MG5_aMC_v2_3_3/madgraph/various/cluster.py MG5
 +                  error = %(stderr)s
 +                  log = %(log)s
                    Initialdir = %(cwd)s
--                  Request_memory = 528
 -                  %(requirement)s
 -                  getenv=True
 -                  queue 1
